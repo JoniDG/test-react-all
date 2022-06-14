@@ -1,11 +1,16 @@
-//import { CartProducts } from "./useState/CartProducts";
 //import { Counter } from "./useState/Counter";
+//import { CartProducts } from "./useState/CartProducts";
 //import { Lifecycle } from "./useEffect/Lifecycle";
 //import { Users } from "./useEffect/Users";
+//import { Abuelo } from "./props/Abuelo";
 
-import { Abuelo } from "./props/Abuelo";
+import { UserProvider } from "./contexts/UserProvider";
+import { Navbar } from "./useContext/Navbar";
+import { Pokelist } from "./useContext/Pokelist";
+
 
 function App() {
+
   return (
     <div>
 
@@ -14,14 +19,19 @@ function App() {
       <CartProducts/> 
       */}
 
-
-
       {/* UseEffect
       <Lifecycle/> 
       <Users/>
       */}
-      <Abuelo/>
 
+
+      {/* Props
+      <Abuelo/>
+      */}
+      <UserProvider>
+        <Navbar/>
+        <Pokelist/>
+      </UserProvider>
     </div>
   );
 }
