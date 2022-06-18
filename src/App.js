@@ -19,16 +19,20 @@ import { Padre } from "./useContext/childrenProp/Padre";
 import { Provider } from "./useContext/childrenProp/Provider";
 */
 
-import { PokesProvider } from "./contexts/PokesProvider";
-import { UserProvider } from "./contexts/UserProvider";
+/* useContext
+import { PokesProvider } from "./useContext/contexts/PokesProvider";
+import { UserProvider } from "./useContext/contexts/UserProvider";
 import { Navbar } from "./useContext/Navbar";
 import { Pokelist } from "./useContext/Pokelist";
+*/
 
-
+/* CustomHooks
+import { Counter } from "./customHooks/Counter";
+import { Tasks } from "./customHooks/Tasks";
+import { MouseApp } from "./customHooks/MouseApp"; 
+*/
 
 function App() {
-  /*Al actualizar un estado creado en el component APP se renderizan todos los componentes "hijos" que esten metidos en APP 
-    es por eso que creamos el component UserProvider */
   return (
     <div>
 
@@ -57,13 +61,24 @@ function App() {
           </Provider>   
         </Padre>
       */}
-      {/*Si usamos UserContext.Provider value={data} CUANDO DATA CAMBIE todo lo que esta por debajo del "arbol" se va a volver a renderizar (Navbar,Pokelist,Pokes)*/}
-      <UserProvider>  
+      {/* useContext
+      Al actualizar un estado creado en el component APP se renderizan todos los componentes "hijos" que esten metidos en APP 
+      es por eso que creamos el component UserProvider.
+      Si usamos UserContext.Provider value={data} CUANDO DATA CAMBIE todo lo que esta por debajo del "arbol" se va a volver a renderizar (Navbar,Pokelist,Pokes)
+      <UserProvider>
         <PokesProvider>
           <Navbar/>
           <Pokelist/>
         </PokesProvider>
       </UserProvider>
+      */}
+
+      {/* customHooks
+        <Counter/> 
+        <Tasks/>
+        <MouseApp/>
+      */}
+
     </div>
   );
 }

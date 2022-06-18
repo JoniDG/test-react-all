@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
-import { UserContext } from '../contexts/UserProvider';
+import { UserContext } from './contexts/UserProvider';
+
 
 
 export const Navbar = () => {

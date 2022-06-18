@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react'
-import { getPost } from '../helpers/getPosts';
-import { getUser } from '../helpers/getUser';
+import { getPost } from './helpers/getPosts';
+import { getUser } from './helpers/getUser';
+
 
 
 export const Users = () => {

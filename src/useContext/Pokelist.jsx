@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
-import { PokesContext } from '../contexts/PokesProvider';
+import { PokesContext } from './contexts/PokesProvider';
+
 import { Poke } from './Poke'
 
 export const Pokelist = () => {
