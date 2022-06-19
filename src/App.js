@@ -3,6 +3,8 @@ import { Counter } from "./useState/Counter";
 import { CartProducts } from "./useState/CartProducts"; 
 */
 
+import { Users } from "./memo-useMemo-useCallback/Users";
+
 /* useEffect
 import { Lifecycle } from "./useEffect/Lifecycle";
 import { Users } from "./useEffect/Users"; 
@@ -78,7 +80,7 @@ function App() {
         <Tasks/>
         <MouseApp/>
       */}
-
+    <Users/>
     </div>
   );
 }
