@@ -45,6 +45,16 @@ import { RenderApp } from "./useRef/RenderApp";
 import { Loading } from "./useRef/Loading";
 */
 
+/* react-router-v6
+import { Routes, Route, Link } from "react-router-dom";
+import { AuthProvider } from "./reactRouterV6/contexts/useAuth";
+import Details from "./reactRouterV6/Details";
+import { Home } from "./reactRouterV6/Home";
+import { Login } from "./reactRouterV6/Login";
+import { Motos } from "./reactRouterV6/Motos";
+import { ProtectedRoute } from "./reactRouterV6/routes/ProtectedRoute";
+import { Search } from "./reactRouterV6/Search"; 
+*/
 
 function App() {
 	return (
@@ -101,15 +111,48 @@ function App() {
 			<CopyApp/>
 			<ScrollAnimation/>
 			*/}
-			
+
 			{/* useRef referencias mutables
 			<RenderApp/> 
 			<Loading/>
 			*/}
 
-			
+			{/* react-router-v6
+			<header>
+				<h1>SINGLE PAGE APP</h1>
+				<nav>
+					<ul>
+						<li><Link to="/">Home</Link></li>
+						<li><Link to="/search">Search</Link></li>
+					</ul>
+				</nav>
+			</header>
+			*/}
+			{/*Al hacerlo sin single page app recarga toda la pag
+			<div>
+				<h1>Esto no es single page app</h1>
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/search">Search</a></li>
+					</ul>
+				</nav>
+			</div> */}
 
-		</div>
+			{/*react-router-v6
+			<AuthProvider>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/search" element={<ProtectedRoute><Search /></ProtectedRoute>} />
+					<Route path="/motos/:marca" element={<Motos />}>
+						<Route path="details" element={<Details />} />	//Ruta anidada
+					</Route>
+					<Route path="/login" element={<Login />} />
+					<Route path="*" element={<h1>404 Not Found</h1>} />
+				</Routes >
+			</AuthProvider >
+			*/}
+		</div >
 	);
 }
 export default App;
