@@ -56,6 +56,10 @@ import { ProtectedRoute } from "./reactRouterV6/routes/ProtectedRoute";
 import { Search } from "./reactRouterV6/Search"; 
 */
 
+import { Counter } from "./useReducer/Counter";
+//import { Tasks } from "./useReducer/Tasks";
+//import { ProductApp } from "./useReducer/ProductApp";
+
 function App() {
 	return (
 		<div>
@@ -152,6 +156,14 @@ function App() {
 				</Routes >
 			</AuthProvider >
 			*/}
+			{/* 
+			
+			<Tasks />
+			<ProductApp />
+			*/}
+			<Counter />
+
+
 		</div >
 	);
 }
